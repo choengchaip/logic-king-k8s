@@ -5,6 +5,7 @@ on:
       tags:
         description: 'Github tag commit sha'
         required: true
+        default: 'latest'
 jobs:
   Deploy:
     runs-on: ubuntu-latest
