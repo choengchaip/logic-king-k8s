@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: logic-frontend
+  namespace: logic
+spec:
+  ports:
+    - name: logic-frontend
+      port: 80
+      targetPort: 8000
+      protocol: TCP
+  selector:
+    app: logic-frontend

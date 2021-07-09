@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logic-frontend
+  namespace: logic
+spec:
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: logic-frontend
+  template:
+    metadata:
+      labels:
+        app: logic-frontend
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: logic-frontend
+          image: chengchaip/logic-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - name: logic-frontend
+              containerPort: 8000
