@@ -1,15 +1,15 @@
 name: Logic Frontend Deploy
 on:
   workflow_dispatch:
-#    inputs:
-#      commit:
-#        description: 'Github commit sha'
-#        required: true
+    inputs:
+      tag_commit:
+        description: 'Github commit sha'
+        required: true
 jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${github.event.inputs.commit}"
+      - run: echo "${github.event.inputs.tag_commit}"
 #      - name: Checking out this repository
 #        uses: actions/checkout@v2
 #      - name: Install doctl
