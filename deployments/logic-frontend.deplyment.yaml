@@ -20,7 +20,7 @@ spec:
       restartPolicy: Always
       containers:
         - name: logic-frontend
-          image: chengchaip/logic-frontend:latest
+          image: logicking/logic-frontend:latest
           imagePullPolicy: Always
           ports:
             - name: logic-frontend

@@ -1,0 +1,20 @@
+name: Logic Frontend Deploy
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'Github commit sha'
+        required: true
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${github.event.inputs.commit}"
+#      - name: Checking out this repository
+#        uses: actions/checkout@v2
+#      - name: Install doctl
+#        uses: digitalocean/action-doctl@v2
+#        with:
+#          token: ${{ secrets.DO_ACCESS_TOKEN }}
+#      - run: chmod +x ./scripts/logic-frontend-deploy.script.sh
+#      - run: ./scripts/logic-frontend-deploy.script.sh "${github.event.inputs.commit}"
