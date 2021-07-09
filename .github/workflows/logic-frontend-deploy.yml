@@ -1,10 +1,10 @@
 name: Logic Frontend Deploy
 on:
   workflow_dispatch:
-    inputs:
-      commit:
-        description: 'Github commit sha'
-        required: true
+#    inputs:
+#      commit:
+#        description: 'Github commit sha'
+#        required: true
 jobs:
   Deploy:
     runs-on: ubuntu-latest
