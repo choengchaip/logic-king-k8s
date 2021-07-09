@@ -10,7 +10,7 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${github.event.inputs.tags}"
+      - run: echo "${{github.event.inputs.tags}}"
 #      - name: Checking out this repository
 #        uses: actions/checkout@v2
 #      - name: Install doctl
