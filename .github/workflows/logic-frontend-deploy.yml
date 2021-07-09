@@ -17,4 +17,4 @@ jobs:
         with:
           token: ${{ secrets.DO_ACCESS_TOKEN }}
       - run: chmod +x ./scripts/logic-frontend-deploy.script.sh
-      - run: ./scripts/logic-frontend-deploy.script.sh "${{ github.event.inputs.tags }}"
+      - run: ./scripts/logic-frontend-deploy.script.sh "${github.event.inputs.tags}"
