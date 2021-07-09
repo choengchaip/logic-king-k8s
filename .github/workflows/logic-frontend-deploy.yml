@@ -2,8 +2,8 @@ name: Logic Frontend Deploy
 on:
   workflow_dispatch:
     inputs:
-      tag_commit:
-        description: 'Github commit sha'
+      tags:
+        description: 'Github tag commit sha'
         required: true
 jobs:
   Deploy:
